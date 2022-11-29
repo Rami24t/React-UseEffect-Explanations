@@ -20,3 +20,13 @@ useEffect runs on every render. That means that when the count changes, a render
 This is not what we want. There are several ways to control when side effects run.
 
 We should always include the second parameter which accepts an array. We can optionally pass dependencies to useEffect in this array.
+
+  
+  
+  ### Effect Cleanup
+
+Some effects require cleanup to reduce memory leaks.
+
+Timeouts, subscriptions, event listeners, and other effects that are no longer needed should be disposed.
+
+We do this by including a return function at the end of the useEffect Hook.
